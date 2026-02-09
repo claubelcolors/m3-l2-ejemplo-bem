@@ -1,0 +1,36 @@
+$btn-bg: #04aa6d;
+$btn-border: green;
+$btn-important-bg: rgb(229, 11, 11);
+$btn-hover-dark: #3e8e41;
+
+.btn-group {
+    --btn-bg: #{$btn-bg};
+    display: flex; // Reemplaza floats obsoletos
+
+    &__button {
+        background-color: var(--btn-bg);
+        border: 1px solid $btn-border;
+        padding: 10px 24px;
+        cursor: pointer;
+        flex: 1; // Distribuye espacio igual
+        color:white;
+        font-size: 1.25rem;
+        font-weight: 600;
+
+        &:not(:last-child) {
+            border-right: none; // Mantiene lógica anti-doble borde
+        }
+
+        &:hover {
+            background-color: $btn-hover-dark;
+        }
+
+        &--important {
+            background-color: $btn-important-bg;
+
+            &:hover {
+                background-color: red;
+            }
+        }
+    }
+}

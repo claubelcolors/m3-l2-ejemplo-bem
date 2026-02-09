@@ -1,0 +1,50 @@
+@use './variables' as v;
+
+.alert {
+    padding: 1rem 0.5rem;
+    background-color: grey;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 1.225rem;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.5s ease;
+    width: 90%;
+    margin:1rem auto;
+    display:flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &__icon{
+        color: black;
+    }
+
+    &__text{
+        color:black;
+    }
+
+    &--success{
+        color:white;
+        background: linear-gradient(to right, v.$success, v.$success-soft);
+        i, p {
+            color:white;
+        }
+    }
+
+    &--danger{
+        color:white;
+        background: linear-gradient(to right, v.$danger, v.$danger-soft);
+
+        i, p {
+            color:white;
+        }
+        
+    }
+
+
+    &:hover{
+        cursor: pointer;
+        transform: translatey(-5px) scale(1.025);
+        opacity: 0.8;
+    }
+}

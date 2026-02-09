@@ -1,0 +1,62 @@
+@use '../blocks/variables' as v;
+
+.team-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    transition: all 0.5s ease;
+
+    &__image{
+        width: 100%;
+    }
+
+    &__title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    &__social-link {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+
+        &--facebook {
+            color: v.$color-facebook;
+        }
+        &--twitter {
+            color: v.$color-twitter;
+        }
+        &--linkedin {
+            color: v.$color-linkedin;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__contact-button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+
+    &:hover {
+        transform: scale(1.05) translateY(15px);
+        box-shadow: 5px 5px 15px 5px #000000;
+    }
+}

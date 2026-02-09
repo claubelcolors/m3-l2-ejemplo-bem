@@ -1,0 +1,13 @@
+1. Al iniciar proyecto ejecutar:
+
+npm init -y
+
+2.- Instalar sass como dependencia de desarrollo
+
+npm install sass -D
+
+3. Agregamos un Script al package.json reemplazando a test
+
+"scripts": {
+    "sass": "sass --watch scss:assets/css"
+  },
